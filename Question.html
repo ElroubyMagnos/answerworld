@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ElroubyFramework/main.css">
+    <link rel="stylesheet" href="my.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.0/css/all.css">
+    <title>عالم الاجابات</title>
+</head>
+<body>
+    <!--Header-->
+    <div class="flex-row spacebetween back-blue pl-5 pr-5 mb-10">
+        <div class="logo align-center allcenter">
+            <img src="" alt="">
+        </div>
+        <div class="n-navbar">
+            <span class="Show"></span>
+            <ul class="flex-row-rev ai-center-mob">
+                <li><button class="btn-blue-flat uandd p-3" type="button" onclick="window.location.replace('/HomePage')"><i class="fa-solid fa-house"></i> الصفحة الرئيسية</button></li>
+                <li><button class="btn-blue-flat uandd p-3" type="button" onclick="window.location.replace('/PostPage')"><i class="fa-solid fa-plus"></i> نشر سؤال</li>
+                <li><button class="btn-blue-flat uandd p-3" type="button" onclick="document.getElementById('SignIn').style.display = 'block'"><i class="fa-solid fa-arrow-right-to-bracket"></i> تسجيل الدخول</button></li>
+                <li><button class="btn-blue-flat uandd p-3" type="button" onclick="document.getElementById('SignUp').style.display = 'block'"><i class="fa-solid fa-user-plus"></i> التسجيل في الموقع</button></li>
+                <li><button class="btn-blue-flat uandd p-3" type="button" onclick="window.location.replace('/SignOutPage')"><i class="fa-solid fa-arrow-right-from-bracket"></i> تسجيل الخروج</button></li>
+                <li>
+                    <span class="earth" data-count="0">
+                        <i class="fa-solid fa-earth-americas fs-25"></i>
+                    </span>
+                </li>
+                <li>
+                    <span class="earth" data-count="0">
+                        <i class="fa-solid fa-comment fs-25"></i>
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--End Header-->
+    <div class="container flex-row spacebetween">
+        <div>
+            <div class="grayscale lineandshine col-3 height-300px width-300px mb-15">
+                <h1 class="mt-0 mb-15 t-center">اعلن معنا</h1>
+                <hr/>
+                <img style="max-width: 100%;" class="widthfc heightfc" src="Images/adhere.jpg" alt="">
+            </div>
+            <div class="grayscale lineandshine col-3 height-300px width-300px">
+                <h1 class="mt-0 mb-15 t-center">اسئلة مماثلة</h1>
+                <hr/>
+                <div>
+                    <p class="fs-25 m-auto-left t-right">متي ولد اينشتاين ونيوتن</p>
+                    <hr />
+                </div>
+            </div>
+        </div>
+        
+        <div class="grayscale lineandshine col-5 t-right flex-row">
+            <div class="m-auto-left">
+                <h1>عنوان السؤال الذي نشره العضو</h1>
+                <p>محتوي السؤال الذي نشره العضو</p>
+            </div>
+            <div>
+                <div class="UpandDown flex-column align-center m-0">
+                    <img src="Images/arrow-down.png" alt="">
+                    <span class="fs-20">0</span>
+                    <img src="Images/arrow-up.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="flex-row-rev m-10 mb-50">
+        <form action="post">
+            <textarea class="width-500px height-100px" name="comment" required></textarea>
+            <br/>
+            <button class="btn-blue-flat fs-25" type="submit">نشر التعليق</button>
+        </form>
+    </div>
+    <div class="grayscale lineandshine width-500px m-auto-left">
+        <h1 class="mt-0 mb-15 t-center">التعليقات</h1>
+        <hr/>
+        <div>
+            <div class="flex-row m-auto-left">
+                <p class="m-auto-left fs-20">التعليق الذي نشره العضو</p>
+                <img class="rad-circle width-100px height-100px" src="Images/personal.ico" alt="">
+                <div class="UpandDown flex-column align-center m-0">
+                    <img src="Images/arrow-down.png" alt="">
+                    <span class="fs-20">0</span>
+                    <img src="Images/arrow-up.png" alt="">
+                </div>
+            </div>
+            <hr/>
+        </div>
+    </div>
+</body>
+</html>

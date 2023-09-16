@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ElroubyFramework/main.css">
+    <link rel="stylesheet" href="my.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.0/css/all.css">
+    <title>عالم الاجابات</title>
+</head>
+<body>
+    <!--Header-->
+    <div class="flex-row spacebetween back-blue pl-5 pr-5 mb-10 align-center">
+        <div class="logo align-center">
+            <img class="width-200px height-100px" src="Images/logo.png" alt="">
+        </div>
+        <div class="n-navbar">
+            <span class="Show"></span>
+            <ul class="flex-row-rev ai-center-mob">
+                <li><button class="btn-blue-flat uandd p-3" type="button" onclick="window.location.replace('/HomePage')"><i class="fa-solid fa-house"></i> الصفحة الرئيسية</button></li>
+                <li><button class="btn-blue-flat uandd p-3" type="button" onclick="window.location.replace('/PostPage')"><i class="fa-solid fa-plus"></i> نشر سؤال</button></li>
+                <li><button class="btn-blue-flat uandd p-3" type="button" onclick="document.getElementById('SignIn').style.display = 'block'"><i class="fa-solid fa-arrow-right-to-bracket"></i> تسجيل الدخول</button></li>
+                <li><button class="btn-blue-flat uandd p-3" type="button" onclick="document.getElementById('SignUp').style.display = 'block'"><i class="fa-solid fa-user-plus"></i> التسجيل في الموقع</button></li>
+                <li><button class="btn-blue-flat uandd p-3" type="button" onclick="window.location.replace('/SignOutPage')"><i class="fa-solid fa-arrow-right-from-bracket"></i> تسجيل الخروج</button></li>
+                <li>
+                    <span class="earth" data-count="0">
+                        <i class="fa-solid fa-earth-americas fs-25"></i>
+                    </span>
+                </li>
+                <li>
+                    <span class="earth" data-count="0">
+                        <i class="fa-solid fa-comment fs-25"></i>
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--End Header-->
+    <section class="flex-row spacebetween tcenter-mob m-auto-center-leftright">
+        <div class="flex-column-rev t-center">
+            <div class="left lineandshine grayscale col-3 width-400px mb-10">
+                <h1 class="t-center">اعلن معنا</h1>
+                <hr class="mb-15"/>
+                <img class="width-300px" src="Images/adhere.jpg" alt="">
+            </div>
+
+            <div class="left lineandshine grayscale col-3 width-400px height-200px mb-10">
+                <h1 class="t-center">اعلي الاعضاء</h1>
+                <hr class="mb-5"/>   
+                
+                <div class="t-right flex-row-rev align-center">
+                    <!--الصورة الشخصية للعضو-->
+                    <img class="width-25px height-25px rad-circle" src="Images/personal.ico" alt="">
+                    <p class="fs-20">اسم العضو</p>
+                    <p>100</p>
+                    <p>نقطة</p>
+                </div>
+            </div>
+
+            <div class="left lineandshine grayscale col-3 width-400px height-200px mb-10">
+                <h1 class="t-center">اعلي الاجابات</h1>
+                <hr class="mb-15"/>   
+                <div class="flex-row-rev align-center">
+                    <img class="width-25px height-25px rad-circle" src="Images/personal.ico" alt="">
+                    <p class="fs-20">اسم العضو</p>
+                    <!--يذهب الي صفحة السؤال الخاص بالاجابة-->
+                    <a href="#">محتوي الاجابة</a>
+                </div>        
+            </div>
+        </div>
+        
+        <div class="right lineandshine grayscale col-5">
+            <h1 class="t-center">احدث الاسئلة</h1>
+            <hr class="mb-15"/>
+            <div class="t-right">
+
+                <!--Loop-->
+                <div class="mb-25">
+                    <a class="fs-25" href="#">كيف اتعلم لغة الجافا سكريبت</a>
+                    <div>
+                        <i class="fa-solid fa-eye"> 0</i>
+                        <i class="fa-solid fa-comment"> 0</i>
+                        <i class="fa-solid fa-star"> 0</i>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <div style="left: calc(50% - 150px);top: calc(50% - 100px);border: 2px solid lightgray;" id="SignIn" class="width-300px height-200px NotFull">
+        <button style="left: 0;top: 0;position: absolute;" class="btn-red-flat" onclick="document.getElementById('SignIn').style.display = 'none'" type="button">X</button>
+        <img src="" alt="">
+        <Form class="t-center" method="post">
+            <input class="t-center" type="text" name="Username" placeholder="اسم المستخدم" required>
+            <input class="t-center" type="password" name="Password" placeholder="كلمة السر" required>
+            <p class="t-left inline-block">حفظ تسجيل الدخول <input style="display: inline;" class="p-a" type="checkbox" name="still"></p>
+            
+            
+            <div class="flex-row">
+                <i class="fa-brands fa-google fs-25 col-3 color-black back-red-hov rad-10"></i>
+                <button class="btn-blue-flat col-4" type="submit">الدخول</button>
+            </div>
+        </Form>
+        
+    </div>
+
+    <div style="left: calc(50% - 150px);top: calc(50% - 100px);border: 2px solid lightgray;" id="SignUp" class="width-300px height-200px NotFull">
+        <button style="left: 0;top: 0;position: absolute;" class="btn-red-flat" onclick="document.getElementById('SignUp').style.display = 'none'" type="button">X</button>
+        <img src="" alt="">
+        <Form class="t-center" method="post">
+            <input class="t-center" type="text" name="Username" placeholder="اسم المستخدم" required>
+            <input class="t-center" type="password" name="Password" placeholder="كلمة السر" required>
+            <input class="t-center" type="password" name="CPassword" placeholder="تكرار كلمة السر" required>            
+            
+            <button class="btn-blue-flat col-4" type="submit">التسجيل</button>
+        </Form>
+        
+    </div>
+</body>
+
+<footer class="width-100 height-100px back-light-blue t-center">
+    <p style="transform: translateY(45px);">&copy; 2024 Answer World Team</p>
+</footer>
+
+</html>
